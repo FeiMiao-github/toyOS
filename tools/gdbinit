@@ -1,0 +1,4 @@
+file bin/kernel.tmp
+target remote :1234
+display /i $pc
+break _start
