@@ -18,7 +18,3 @@ void Memory::init(void)
 		Console::debug_printf("[INFO] E820_MEMINFO[%d] addrh: 0X%x, addrl: 0X%x, type: %d\n", 0, st_E820_MEMINFO[i].addr[1], st_E820_MEMINFO[i].addr[0], st_E820_MEMINFO[i].type);
 	}
 }
-
-void Memory::Memm::init(void)
-{
-}

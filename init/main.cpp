@@ -13,8 +13,6 @@ void Kernel::kernel_init(void)
 	Console::debug_printf("[INFO] end: 0X%p, _edata: 0X%p\n", &_end, &_edata);
 	Memory::init();
 
-	// *test_flg = 0x12345678;
-	// Console::debug_printf("[INFO] E820_MEMINFO type: 0X%x\n", *test_flg);
 	while (true)
 	{
 		hlt();

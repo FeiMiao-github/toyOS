@@ -7,14 +7,6 @@ namespace toyOS
 {
 	class Memory
 	{
-		class Memm
-		{
-			void *memmap[1024];
-
-		public:
-			static void init(void);
-		};
-
 	public:
 		static void init(void);
 	};
