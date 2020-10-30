@@ -1,6 +1,3 @@
-# A := @
-# x86_64
-
 BIT := i386 
 
 AS_FLAGS = -g -O -n -Iinclude
@@ -9,6 +6,8 @@ LDFLAGS =  -m elf_$(BIT) -nostdlib -N -e _start -Ttext 0x7c00
 CPP := g++
 CPPFLAGS := -g -fno-builtin -fno-stack-protector -fomit-frame-pointer -fstrength-reduce -nostdinc -Wall
 CPPFLAGS += -std=c++2a
+# debug flag
+CPPFLAGS += -DDEBUG
 LDCPPFLAGS := -m elf_$(BIT) -nostdlib -N -e 0 -Ttext 0x10000
 
 CC := gcc
@@ -30,4 +29,6 @@ BOOT_DIR := $(ROOT_PATH)/boot
 INIT_DIR := $(ROOT_PATH)/init
 KERNEL_DIR := $(ROOT_PATH)/kernel
 INCLUDE_DIR := $(ROOT_PATH)/include
+
+DEBUG_DIR := $(ROOT_PATH)/debug
 

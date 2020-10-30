@@ -2,7 +2,7 @@ export ROOT_PATH := $(shell pwd)
 
 include tools/config.mk
 
-KERNEL_SRC_DIR := init kernel kernel/driver kernel/mem lib
+KERNEL_SRC_DIR := init kernel kernel/driver kernel/mem lib debug
 
 KERNEL_SRC := $(wildcard .cpp, $(addsuffix /*.cpp, $(addprefix $(ROOT_PATH)/, $(KERNEL_SRC_DIR))))
 KERNEL_TMP := $(KERNEL_SRC:cpp=o)
